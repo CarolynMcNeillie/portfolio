@@ -16,10 +16,23 @@ header,
 }
 
 .content {
-    padding: 75px;
+    padding: 50px 75px;
     align-self: end;
+}
+
+div.navigate {
+    padding: 50px;
+    align-self: center;
+}
+
+.hello {
+    display: grid;
+    grid-template-columns: 145px 1fr;
     img {
-        width: 175px;
+        width: 150px;
+    }
+    h1 {
+        align-self: end;
     }
 }
 
