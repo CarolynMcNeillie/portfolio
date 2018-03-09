@@ -3,17 +3,23 @@
 @import 'variables';
 //////
 header,
-.about-me {
+{
     height: 100vh;
     display: grid;
     grid-template-columns: 600px 1fr;
+}
+
+.about-me {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 600px 3fr 2fr;
 }
 
 .content {
     padding: 75px;
     align-self: end;
     img {
-        width: 200px;
+        width: 175px;
     }
 }
 
@@ -40,7 +46,7 @@ hr {
 .contact {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
 .project-preview {
