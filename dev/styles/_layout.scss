@@ -1,0 +1,270 @@
+    @import 'variables';
+    #home,
+    {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 600px 1fr;
+        @media screen and (max-width: 750px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    #about-me {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 600px 1fr;
+        @media screen and (max-width: 1250px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 760px) {
+            grid-template-columns: 1fr;
+            height: auto;
+            .decoration {
+                height: 150px;
+            }
+        }
+        @media screen and (max-width: 635px) {
+            .about-me-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-me-navigate {
+                grid-row-start: -1;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .hello {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .about-me-grid {
+                padding: 30px;
+            }
+            .hello,
+            nav,
+            .about-me-external,
+            {
+                text-align: center;
+            }
+            img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    
+    .about-me-grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        align-self: end;
+        grid-gap: 30px 50px;
+        padding: 50px 75px;
+    }
+    
+    .content,
+    {
+        padding: 50px 75px;
+        align-self: end;
+    }
+    
+    div.navigate {
+        padding: 50px;
+        align-self: center;
+    }
+    
+    .about-me-navigate {
+        align-self: end;
+        nav {
+            margin: 0;
+            padding-bottom: 30px;
+        }
+    }
+    
+    .hello {
+        display: grid;
+        grid-template-columns: 145px 1fr;
+        img {
+            width: 150px;
+        }
+        h1 {
+            align-self: end;
+        }
+    }
+    
+    .decoration {
+        background-color: $accent-color;
+        background-image: url('/public/images/background.png');
+        background-size: cover;
+        border: 0;
+    }
+    
+    hr {
+        border: 0;
+        height: 0;
+        border-top: 1px solid $accent-color;
+        width: 70px;
+        float: left;
+    }
+    
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+        grid-gap: 15px 1px;
+        padding-left: 0px;
+        margin: 30px 0;
+        font-size: 10px;
+        position: relative;
+        left: -20px;
+        li {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+    
+    .skills .svg-inline--fa {
+        font-size: 45px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #portfolio {
+        padding: 100px 75px 75px;
+        @media screen and (max-width: 520px) {
+            padding: 30px;
+        }
+    }
+    
+    #portfolio {
+        nav {
+            ul,
+            li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        @media screen and (max-width: 520px) {
+            nav {
+                ul,
+                li {
+                    display: block;
+                    margin-right: 0px;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                }
+                position: relative;
+            }
+        }
+    }
+    
+    .project {
+        display: grid;
+        grid-template-columns: 1fr 500px 1fr;
+        margin-bottom: 50px;
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: 1fr;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            .project-image {
+                margin-left: auto;
+                margin-right: auto;
+                order: 3;
+            }
+            .project-name {
+                text-align: center;
+                padding-right: 0;
+            }
+            .project-description {
+                margin-bottom: 50px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 0;
+            }
+        }
+    }
+    
+    .project-name {
+        padding-right: 30px;
+    }
+    
+    .project-description {
+        padding-left: 30px;
+    }
+    
+    .project-image {
+        img {
+            // object-fit: cover;
+            width: 100%;
+            background: #ebebeb;
+            // border: 1px solid red;
+        }
+    }
+    
+    #contact-page,
+    {
+        .decoration {
+            width: 100%;
+            height: 150px;
+        }
+    }
+    
+    .portfolio.decoration {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 5px;
+        padding: 50px 75px;
+        align-self: end;
+        min-height: calc(100vh - 150px);
+        @media screen and (max-width: 1250px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    .footerLinks,
+    .email {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        nav,
+        h1 {
+            display: block;
+            align-self: first-baseline;
+        }
+    }
+    
+    form {
+        margin-top: 75px;
+    }
+    
+    input {
+        display: block;
+        width: 100%;
+        border: 0;
+        padding: 15px 0;
+        margin-top: 30px;
+        border-bottom: 1px solid $accent-gray;
+    }
+    
+    .submit {
+        border: 0;
+    }
