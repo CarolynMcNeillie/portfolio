@@ -29,6 +29,13 @@
             }
             .about-me-navigate {
                 grid-row-start: -1;
+                grid-column: 1;
+                margin: 0;
+                li,
+                ul {
+                    display: inline-block;
+                    padding-right: 20px;
+                }
             }
         }
         @media screen and (max-width: 480px) {
@@ -72,11 +79,22 @@
         align-self: center;
     }
     
+    .about-me-skills {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
     .about-me-navigate {
-        align-self: end;
+        align-self: start;
+        grid-row: 2;
+        grid-column: 2;
+        margin: 30px 0 30px 30px;
         nav {
             margin: 0;
             padding-bottom: 30px;
+        }
+        ul {
+            margin: 0;
         }
     }
     
@@ -137,7 +155,7 @@
     }
     
     #portfolio {
-        padding: 100px 75px 75px;
+        padding: 30px 75px 75px;
         @media screen and (max-width: 520px) {
             padding: 30px;
         }
@@ -151,9 +169,8 @@
                 margin-right: 20px;
             }
             background-color: white;
-            position: fixed;
             width: 100%;
-            top: 0;
+            top: 150px;
         }
         @media screen and (max-width: 520px) {
             nav {
@@ -204,6 +221,7 @@
     
     .project-description {
         padding-left: 30px;
+        align-self: center;
     }
     
     .project-image {
@@ -226,13 +244,14 @@
     .portfolio.decoration {
         width: 100%;
         height: 150px;
+        position: relative;
     }
     
     .contact {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin-bottom: 5px;
-        padding: 50px 75px;
+        padding: 50px;
         align-self: end;
         min-height: calc(100vh - 150px);
         @media screen and (max-width: 1250px) {
