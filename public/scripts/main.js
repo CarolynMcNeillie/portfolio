@@ -1,6 +1,3 @@
-'use strict';
+"use strict";
 
-$(document).ready(function () {
-
-  $('a').smoothScroll();
-});
+$(document).ready(function () {});

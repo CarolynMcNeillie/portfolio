@@ -622,6 +622,17 @@ input {
   color: #000;
   letter-spacing: 2px; }
 
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #607f61;
+  width: 70px;
+  float: left; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
 @media screen and (max-width: 750px) {
   .navigate,
   .decoration {
@@ -634,6 +645,18 @@ input {
 
 .navigate .svg-inline--fa {
   margin-right: 10px; }
+
+.mobile-navigate ul,
+.mobile-navigate li {
+  display: inline-block;
+  padding: 0 5px; }
+
+.mobile-navigate .svg-inline--fa {
+  margin-right: 10px; }
+
+@media screen and (max-width: 400px) {
+  .mobile-navigate {
+    text-align: center; } }
 
 .decoration {
   background-color: #607f61;
@@ -649,25 +672,6 @@ input {
   width: 100%;
   height: 150px; }
 
-.mobile-navigate ul,
-.mobile-navigate li {
-  display: inline-block;
-  padding: 0 5px; }
-
-.mobile-navigate .svg-inline--fa {
-  margin-right: 10px; }
-
-hr {
-  border: 0;
-  height: 0;
-  border-top: 1px solid #607f61;
-  width: 70px;
-  float: left; }
-
-ul {
-  padding: 0;
-  list-style: none; }
-
 #home {
   min-height: 100vh;
   display: grid;
@@ -678,6 +682,9 @@ ul {
       min-height: auto; }
       #home img {
         margin-top: 50px; } }
+
+.hello img {
+  width: 150px; }
 
 .content {
   padding: 50px 75px;
@@ -693,45 +700,10 @@ ul {
     .content {
       padding: 10px 75px;
       min-height: auto; } }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 580px) {
     .content {
       padding: 10px;
       text-align: center; } }
-
-#about-me {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 600px 1fr; }
-  @media screen and (max-width: 1250px) {
-    #about-me {
-      grid-template-columns: 1fr 1fr; } }
-  @media screen and (max-width: 760px) {
-    #about-me {
-      grid-template-columns: 1fr;
-      height: auto; }
-      #about-me .decoration {
-        height: 150px; } }
-  @media screen and (max-width: 635px) {
-    #about-me .about-me-grid {
-      grid-template-columns: 1fr; }
-    #about-me .about-me-navigate {
-      grid-row-start: -1;
-      grid-column: 1;
-      margin: 0; }
-      #about-me .about-me-navigate li,
-      #about-me .about-me-navigate ul {
-        display: inline-block;
-        padding-right: 20px; } }
-  @media screen and (max-width: 400px) {
-    #about-me .about-me-grid {
-      padding: 30px; }
-    #about-me .hello,
-    #about-me nav,
-    #about-me .about-me-external {
-      text-align: center; }
-    #about-me img {
-      margin-left: auto;
-      margin-right: auto; } }
 
 .about-me-grid {
   display: grid;
@@ -739,6 +711,12 @@ ul {
   align-self: end;
   grid-gap: 30px 50px;
   padding: 50px 75px; }
+  @media screen and (max-width: 1250px) {
+    .about-me-grid {
+      grid-template-columns: 1fr; } }
+
+.about-me-me {
+  max-width: 500px; }
 
 .about-me-skills {
   grid-column: 1;
@@ -755,9 +733,6 @@ ul {
     padding-bottom: 30px; }
   .about-me-navigate ul {
     margin: 0; }
-
-.hello img {
-  width: 150px; }
 
 .skills {
   display: grid;
@@ -780,6 +755,57 @@ ul {
   font-size: 45px;
   margin-bottom: 5px;
   text-align: center; }
+
+#about-me {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 600px 1fr; }
+  @media screen and (max-width: 1250px) {
+    #about-me {
+      grid-template-columns: 1fr 1fr; }
+      #about-me .about-me-grid {
+        grid-template-columns: 1fr;
+        -ms-flex-item-align: stretch;
+            align-self: stretch;
+        min-width: 600px; }
+      #about-me .about-me-navigate,
+      #about-me .mobile-navigate {
+        grid-row-start: -1;
+        grid-column: 1;
+        margin: 0; }
+        #about-me .about-me-navigate li,
+        #about-me .about-me-navigate ul,
+        #about-me .mobile-navigate li,
+        #about-me .mobile-navigate ul {
+          display: inline-block;
+          padding-right: 20px; }
+      #about-me .about-me-me {
+        grid-row-start: 2; }
+      #about-me .about-me-skills {
+        grid-row-start: 3; } }
+  @media screen and (max-width: 800px) {
+    #about-me {
+      grid-template-columns: 1fr;
+      height: auto;
+      -ms-flex-line-pack: start;
+          align-content: start; }
+      #about-me .decoration {
+        height: 150px; }
+      #about-me .about-me-grid {
+        min-width: auto;
+        padding: 10px 75px;
+        min-height: auto;
+        -ms-flex-item-align: start;
+            align-self: start; } }
+  @media screen and (max-width: 585px) {
+    #about-me {
+      text-align: center; }
+      #about-me .about-me-grid {
+        padding: 10px; }
+      #about-me hr {
+        display: none; }
+      #about-me .about-me-skills {
+        margin: 0 30px; } }
 
 #portfolio {
   padding: 30px 75px 75px; }
