@@ -575,7 +575,6 @@ p {
     margin-right: 10px; }
 
 nav {
-  margin-bottom: 75px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   line-height: 1.5em; }
@@ -623,6 +622,16 @@ input {
   color: #000;
   letter-spacing: 2px; }
 
+@media screen and (max-width: 750px) {
+  .navigate,
+  .decoration {
+    display: none; } }
+
+@media screen and (min-width: 750px) {
+  .mobile-navigate,
+  .mobile-docoration {
+    display: none; } }
+
 .navigate .svg-inline--fa {
   margin-right: 10px; }
 
@@ -631,6 +640,22 @@ input {
   background-image: url("/public/images/background.png");
   background-size: cover;
   border: 0; }
+
+.mobile-docoration {
+  background-color: #607f61;
+  background-image: url("/public/images/background.png");
+  background-size: cover;
+  border: 0;
+  width: 100%;
+  height: 150px; }
+
+.mobile-navigate ul,
+.mobile-navigate li {
+  display: inline-block;
+  padding: 0 5px; }
+
+.mobile-navigate .svg-inline--fa {
+  margin-right: 10px; }
 
 hr {
   border: 0;
@@ -649,12 +674,29 @@ ul {
   grid-template-columns: 600px 1fr; }
   @media screen and (max-width: 750px) {
     #home {
-      grid-template-columns: 1fr; } }
+      display: block;
+      min-height: auto; }
+      #home img {
+        margin-top: 50px; } }
 
 .content {
   padding: 50px 75px;
   -ms-flex-item-align: end;
       align-self: end; }
+  .content .navigate {
+    margin-top: 75px; }
+    .content .navigate ul,
+    .content .navigate li {
+      display: inline-block;
+      margin-right: 20px; }
+  @media screen and (max-width: 750px) {
+    .content {
+      padding: 10px 75px;
+      min-height: auto; } }
+  @media screen and (max-width: 750px) {
+    .content {
+      padding: 10px;
+      text-align: center; } }
 
 #about-me {
   min-height: 100vh;
@@ -714,17 +756,8 @@ ul {
   .about-me-navigate ul {
     margin: 0; }
 
-.hello {
-  display: grid;
-  grid-template-columns: 150px 1fr; }
-  .hello img {
-    width: 150px; }
-  .hello h1 {
-    -ms-flex-item-align: end;
-        align-self: end; }
-  @media screen and (max-width: 780px) {
-    .hello {
-      grid-template-columns: 1fr; } }
+.hello img {
+  width: 150px; }
 
 .skills {
   display: grid;
