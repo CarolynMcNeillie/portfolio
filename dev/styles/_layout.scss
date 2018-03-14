@@ -242,19 +242,16 @@ ul {
         width: 100%;
         top: 150px;
     }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 750px) {
+        padding: 10px 75px;
+        min-height: auto;
+    }
+    @media screen and (max-width: 650px) {
+        text-align: center;
         padding: 30px;
-        nav {
-            ul,
-            li {
-                display: block;
-                margin-right: 0px;
-                margin: 0;
-                padding: 0;
-                text-align: center;
-            }
-            position: relative;
-        }
+    }
+    @media screen and (max-width: 515px) {
+        padding: 10px;
     }
 }
 
@@ -262,6 +259,10 @@ ul {
     width: 100%;
     height: 150px;
     position: relative;
+}
+
+.fridge-to-table {
+    margin-top: 50px;
 }
 
 .project {
@@ -283,11 +284,7 @@ ul {
             padding-right: 0;
         }
         .project-description {
-            margin-bottom: 50px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 0;
+            display: none;
         }
     }
 }
@@ -335,16 +332,15 @@ ul {
             grid-column: 1;
         }
     }
+    @media screen and (max-width: 750px) {
+        padding: 10px 75px;
+        min-height: auto;
+    }
     @media screen and (max-width: 680px) {
         grid-template-columns: 1fr;
-        .navigate {
-            grid-column: 1;
-            grid-row: 1;
-            li {
-                display: inline-block;
-                margin-right: 20px;
-            }
-        }
+    }
+    @media screen and (max-width: 500px) {
+        padding: 10px;
     }
 }
 
