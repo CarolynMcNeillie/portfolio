@@ -591,11 +591,7 @@ a {
     color: #607f61; }
 
 #home h1 {
-  font-size: 90px;
-  margin: 0; }
-  @media screen and (max-width: 500px) {
-    #home h1 {
-      font-size: 50px; } }
+  font-size: 60px; }
   @media screen and (max-width: 350px) {
     #home h1 {
       font-size: 40px; } }
@@ -614,7 +610,7 @@ a {
 .contact-page h2 {
   padding: 0; }
 
-.contact-me a {
+.contact-form a {
   text-decoration: underline; }
 
 input {
@@ -627,10 +623,8 @@ input {
   color: #000;
   letter-spacing: 2px; }
 
-div.navigate {
-  padding: 50px;
-  -ms-flex-item-align: center;
-      align-self: center; }
+.navigate .svg-inline--fa {
+  margin-right: 10px; }
 
 .decoration {
   background-color: #607f61;
@@ -686,9 +680,6 @@ ul {
       #about-me .about-me-navigate ul {
         display: inline-block;
         padding-right: 20px; } }
-  @media screen and (max-width: 480px) {
-    #about-me .hello {
-      grid-template-columns: 1fr; } }
   @media screen and (max-width: 400px) {
     #about-me .about-me-grid {
       padding: 30px; }
@@ -725,12 +716,15 @@ ul {
 
 .hello {
   display: grid;
-  grid-template-columns: 145px 1fr; }
+  grid-template-columns: 150px 1fr; }
   .hello img {
     width: 150px; }
   .hello h1 {
     -ms-flex-item-align: end;
         align-self: end; }
+  @media screen and (max-width: 780px) {
+    .hello {
+      grid-template-columns: 1fr; } }
 
 .skills {
   display: grid;
@@ -817,8 +811,7 @@ ul {
       align-self: center; }
 
 .project-image img {
-  width: 100%;
-  background: #ebebeb; }
+  width: 100%; }
 
 #contact-page .decoration {
   width: 100%;
@@ -826,7 +819,7 @@ ul {
 
 .contact {
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-columns: 2fr 3fr 1fr;
   margin-bottom: 5px;
   padding: 75px;
   align-self: end;
@@ -868,6 +861,3 @@ input {
 
 .submit {
   border: 0; }
-
-.just-the-ticket {
-  display: none; }
